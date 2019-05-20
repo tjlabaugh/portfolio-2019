@@ -6,11 +6,10 @@ import { projects } from '../data/projects';
 const Portfolio = () => {
   return (
     <div className={portfolioStyle.portfolio}>
+      <h2>Portfolio</h2>
       <p>Hello.</p>
       <p>I'm TJ, a web developer.</p>
-      <h2>Portfolio</h2>
       <p>Check out some of my work:</p>
-      {console.log('projects:', projects)}
       {projects.map((project, i) => {
         return (
           <Project

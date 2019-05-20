@@ -1,15 +1,16 @@
 import React from 'react';
+import contactStyle from './contact.module.scss';
 
 const Contact = () => {
   return (
-    <div>
+    <div className={contactStyle.contact}>
       <h2>Contact Me</h2>
-      <form action="">
-        <div>
+      <form className={contactStyle.form} action="">
+        <div className={contactStyle.form__fields}>
           <label htmlFor="">Name</label>
           <input type="text" name="name" id="name" placeholder="Your Name" />
         </div>
-        <div>
+        <div className={contactStyle.form__fields}>
           <label htmlFor="">Email</label>
           <input
             type="email"
@@ -18,7 +19,7 @@ const Contact = () => {
             placeholder="your@email.com"
           />
         </div>
-        <div>
+        <div className={contactStyle.form__textareaFields}>
           <label htmlFor="">Message</label>
           <textarea
             name="message"
@@ -28,6 +29,7 @@ const Contact = () => {
             placeholder="Say hi!"
           />
         </div>
+        <input type="submit" value="Send" />
       </form>
     </div>
   );
