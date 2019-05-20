@@ -1,0 +1,13 @@
+@import '../styles/variables';
+
+.footer {
+  background: $dark;
+
+  p {
+    margin: 0;
+    padding: 2.5rem 0;
+    font-size: 1.6rem;
+    color: #fff;
+    text-align: center;
+  }
+}
