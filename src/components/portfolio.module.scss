@@ -1,0 +1,18 @@
+@import '../styles/variables';
+
+.portfolio {
+  background: url('../assets/body-bg.png') repeat;
+  padding: 6rem;
+
+  p {
+    color: $dark;
+  }
+
+  h2 {
+    font-size: 5rem;
+    letter-spacing: 0.2rem;
+    color: $blue;
+    text-align: center;
+    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.6);
+  }
+}

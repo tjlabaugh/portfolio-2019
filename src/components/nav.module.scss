@@ -24,5 +24,16 @@
     font-family: $montserrat-med;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
+
+    div {
+      width: 0;
+      height: 3px;
+      background: $blue;
+      transition: 0.4s width ease-in-out;
+    }
+
+    &:hover div {
+      width: 100%;
+    }
   }
 }

@@ -8,11 +8,11 @@ const Hero = () => {
       <div className={heroStyle.content}>
         <div>
           <h1>TJ LaBaugh</h1>
-          <h2>
+          <h3>
             <span>{`< `}</span>
             {`web developer`}
             <span>{` >`}</span>
-          </h2>
+          </h3>
         </div>
         <div>
           <p>Check me out on LinkedIn</p>

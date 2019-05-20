@@ -6,8 +6,16 @@ html {
   font-size: 10px;
 }
 
-body {
-  background: $color;
+h1,
+h2,
+h3,
+h4 {
+  font-family: $lalezar;
+}
+
+p {
+  font-size: 3rem;
+  font-family: $montserrat-med;
 }
 
 a {
