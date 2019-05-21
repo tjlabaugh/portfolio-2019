@@ -1,9 +1,8 @@
 @import '../styles/variables';
 
 .portfolio {
-  background: url('../assets/body-bg.png') repeat;
-  padding: 6rem;
-
+  padding: 6rem 0;
+  background: url('../images/body-bg.png') repeat;
   p {
     color: $dark;
   }
@@ -11,4 +10,9 @@
   h2 {
     color: $blue;
   }
+}
+
+.container {
+  margin: 0 auto;
+  width: 80%;
 }

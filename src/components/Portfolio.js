@@ -1,25 +1,33 @@
 import React from 'react';
 import Project from './Project';
 import portfolioStyle from './portfolio.module.scss';
+import backgroundImage from '../images/body-bg.png';
 import { projects } from '../data/projects';
 
-const Portfolio = () => {
+const Portfolio = props => {
   return (
-    <div className={portfolioStyle.portfolio}>
-      <h2>Portfolio</h2>
-      <p>Hello.</p>
-      <p>I'm TJ, a web developer.</p>
-      <p>Check out some of my work:</p>
-      {projects.map((project, i) => {
-        return (
-          <Project
-            key={i}
-            name={project.name}
-            image={project.image}
-            link={project.link}
-          />
-        );
-      })}
+    <div
+      style={{
+        background: `url(${backgroundImage}) repeat`,
+      }}
+      className={portfolioStyle.portfolio}
+    >
+      <div className={portfolioStyle.container}>
+        <h2>Portfolio</h2>
+        <p>Hello.</p>
+        <p>I'm TJ, a web developer.</p>
+        <p>Check out some of my work:</p>
+        {projects.map((project, i) => {
+          return (
+            <Project
+              key={i}
+              name={project.name}
+              images={props.images}
+              link={project.link}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -1,10 +1,15 @@
 import React from 'react';
 import heroStyle from './hero.module.scss';
-// import heroBackground from '../assets/hero-bg.jpg';
+import heroBackground from '../images/hero-bg.jpg';
 
 const Hero = () => {
   return (
-    <div className={heroStyle.hero}>
+    <div
+      style={{
+        background: `url(${heroBackground}) 50% 50% no-repeat fixed`,
+      }}
+      className={heroStyle.hero}
+    >
       <div className={heroStyle.content}>
         <div>
           <h1>TJ LaBaugh</h1>

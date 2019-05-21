@@ -4,10 +4,19 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+const path = require(`path`);
+
 module.exports = {
-  siteMetadata: {
-    title: 'TJ LaBaugh | Web Developer',
-    description: 'TJ LaBaugh Web Developer',
-  },
-  plugins: [`gatsby-plugin-sass`],
+  plugins: [
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src`, `images`),
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+  ],
 };

@@ -1,7 +1,8 @@
 export const projects = [
   {
     name: 'Test Project',
-    image: '/test-project.jpg',
+    // image: path.join(__dirname, `src`, `assets`, `hero-bg.jpg`),
+    image: '../assets/hero-bg.jpg',
     link: '/test-project',
   },
   {
