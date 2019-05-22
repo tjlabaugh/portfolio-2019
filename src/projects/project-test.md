@@ -1,5 +1,5 @@
 ---
-slug: '/test-project'
+slug: 'test-project'
 date: '2019-04-12'
 title: 'Test Project'
 ---

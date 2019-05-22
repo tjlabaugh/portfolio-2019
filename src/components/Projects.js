@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticQuery, graphql, Link } from 'gatsby';
+import { StaticQuery, graphql } from 'gatsby';
 import Project from './Project';
 
 const PROJECT_QUERY = graphql`
@@ -28,7 +28,7 @@ const Projects = () => (
             key={edge.node.frontmatter.slug}
             title={edge.node.frontmatter.title}
             // images={props.images}
-            slug={`/projects${edge.node.frontmatter.slug}`}
+            slug={edge.node.frontmatter.slug}
           />
         ))}
       </div>

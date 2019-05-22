@@ -1,23 +1,27 @@
 import React from 'react';
 import navStyle from './nav.module.scss';
+import { Link } from 'gatsby';
 
 const Nav = () => {
   return (
     <nav className={navStyle.nav}>
       <ul>
         <li>
-          <a href="#home">
-            Home<div />
-          </a>
+          <Link to="/">
+            Home
+            <div />
+          </Link>
         </li>
         <li>
           <a href="#portfolio">
-            Portfolio<div />
+            Portfolio
+            <div />
           </a>
         </li>
         <li>
           <a href="#contact">
-            Contact<div />
+            Contact
+            <div />
           </a>
         </li>
       </ul>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Img from 'gatsby-image';
+// import Img from 'gatsby-image';
 import projectStyle from './project.module.scss';
 
 const Project = ({ title, images, slug }) => {
@@ -10,7 +10,7 @@ const Project = ({ title, images, slug }) => {
       <div className={projectStyle.imageContainer}>
         {/* <Img fluid={images.imageOne.childImageSharp.fluid} /> */}
       </div>
-      <Link to={slug}>{title}</Link>
+      <Link to={`projects/${slug}`}>{title}</Link>
     </div>
   );
 };
