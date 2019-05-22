@@ -1,8 +1,8 @@
 import React from 'react';
-import Project from './Project';
+import Projects from './Projects';
 import portfolioStyle from './portfolio.module.scss';
 import backgroundImage from '../images/body-bg.png';
-import { projects } from '../data/projects';
+// import { projects } from '../data/projects';
 
 const Portfolio = props => {
   return (
@@ -17,7 +17,8 @@ const Portfolio = props => {
         <p>Hello.</p>
         <p>I'm TJ, a web developer.</p>
         <p>Check out some of my work:</p>
-        {projects.map((project, i) => {
+        <Projects />
+        {/* {projects.map((project, i) => {
           return (
             <Project
               key={i}
@@ -26,7 +27,7 @@ const Portfolio = props => {
               link={project.link}
             />
           );
-        })}
+        })} */}
       </div>
     </div>
   );

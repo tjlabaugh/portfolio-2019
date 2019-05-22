@@ -3,14 +3,14 @@ import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import projectStyle from './project.module.scss';
 
-const Project = ({ name, images, link }) => {
+const Project = ({ title, images, slug }) => {
   return (
     <div>
-      <h3>{name}</h3>
+      <h3>{title}</h3>
       <div className={projectStyle.imageContainer}>
-        <Img fluid={images.imageOne.childImageSharp.fluid} />
+        {/* <Img fluid={images.imageOne.childImageSharp.fluid} /> */}
       </div>
-      <Link to={link}>{name}</Link>
+      <Link to={slug}>{title}</Link>
     </div>
   );
 };
