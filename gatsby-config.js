@@ -23,8 +23,22 @@ module.exports = {
         path: path.join(__dirname, `src`, `projects`),
       },
     },
-    'gatsby-transformer-remark',
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          'gatsby-remark-relative-images',
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 800,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
+    },
   ],
 };
