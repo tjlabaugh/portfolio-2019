@@ -3,7 +3,7 @@ import contactStyle from './contact.module.scss';
 
 const Contact = () => {
   return (
-    <div className={contactStyle.contact}>
+    <div className={contactStyle.contact} id="contact">
       <h2>Contact Me</h2>
       <form className={contactStyle.form} action="">
         <div className={contactStyle.form__fields}>

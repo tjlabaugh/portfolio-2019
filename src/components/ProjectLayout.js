@@ -7,7 +7,7 @@ class ProjectLayout extends React.Component {
     const { markdownRemark } = this.props.data;
 
     return (
-      <Layout>
+      <Layout location={markdownRemark.frontmatter.slug}>
         <h1>{markdownRemark.frontmatter.title}</h1>
         <div dangerouslySetInnerHTML={{ __html: markdownRemark.html }} />
       </Layout>
@@ -23,6 +23,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        slug
       }
     }
   }

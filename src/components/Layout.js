@@ -5,7 +5,7 @@ import Footer from './Footer';
 const Layout = props => {
   return (
     <div>
-      <Nav />
+      <Nav location={props.location} />
       {props.children}
       <Footer />
     </div>

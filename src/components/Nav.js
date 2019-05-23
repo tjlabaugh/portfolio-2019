@@ -1,8 +1,18 @@
 import React from 'react';
 import navStyle from './nav.module.scss';
 import { Link } from 'gatsby';
+import { navigate } from '@reach/router';
 
-const Nav = () => {
+const Nav = ({ location }) => {
+  const resolveClick = e => {
+    e.preventDefault();
+    location === '/'
+      ? document.querySelector(e.target.hash).scrollIntoView({
+          behavior: 'smooth',
+        })
+      : navigate(e.target.href);
+  };
+
   return (
     <nav className={navStyle.nav}>
       <ul>
@@ -13,16 +23,16 @@ const Nav = () => {
           </Link>
         </li>
         <li>
-          <a href="#portfolio">
+          <Link to="#portfolio" onClick={resolveClick}>
             Portfolio
             <div />
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#contact">
+          <Link to="/#contact" onClick={resolveClick}>
             Contact
             <div />
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

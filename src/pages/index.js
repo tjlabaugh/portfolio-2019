@@ -1,5 +1,4 @@
 import React from 'react';
-import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import Portfolio from '../components/Portfolio';
@@ -8,7 +7,7 @@ import '../styles/styles.scss';
 
 const IndexPage = props => {
   return (
-    <Layout>
+    <Layout location={props.location.pathname}>
       <Hero />
       <Portfolio images={props.data} />
       <Contact />
@@ -17,15 +16,3 @@ const IndexPage = props => {
 };
 
 export default IndexPage;
-
-export const pageQuery = graphql`
-  query {
-    imageOne: file(relativePath: { eq: "hero-bg.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`;

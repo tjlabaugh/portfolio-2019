@@ -11,6 +11,7 @@ const Portfolio = props => {
         background: `url(${backgroundImage}) repeat`,
       }}
       className={portfolioStyle.portfolio}
+      id="portfolio"
     >
       <div className={portfolioStyle.container}>
         <h2>Portfolio</h2>
@@ -18,16 +19,6 @@ const Portfolio = props => {
         <p>I'm TJ, a web developer.</p>
         <p>Check out some of my work:</p>
         <Projects />
-        {/* {projects.map((project, i) => {
-          return (
-            <Project
-              key={i}
-              name={project.name}
-              images={props.images}
-              link={project.link}
-            />
-          );
-        })} */}
       </div>
     </div>
   );
