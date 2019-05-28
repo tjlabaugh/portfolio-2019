@@ -13,6 +13,10 @@
   &:hover .titleContainer__title {
     top: calc(50% - 5rem);
   }
+
+  &:hover .titleContainer__title h3 {
+    left: 0;
+  }
 }
 
 .imageContainer {
@@ -44,12 +48,17 @@
     transition: 0.5s all ease-in-out;
 
     h3 {
+      position: relative;
+      left: 100%;
+      display: inline;
       padding: 0;
       margin: 0;
       font-size: 3rem;
       color: #fff;
       line-height: 3rem;
       letter-spacing: 0.2rem;
+      text-shadow: 0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.6);
+      transition: 0.7s left ease-in;
     }
   }
 }
