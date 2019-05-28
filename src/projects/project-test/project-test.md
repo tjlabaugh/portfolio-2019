@@ -2,6 +2,7 @@
 slug: 'test-project'
 date: '2019-04-12'
 title: 'Test Project'
+featuredImage: './buddy.jpg'
 ---
 
 # Test Project

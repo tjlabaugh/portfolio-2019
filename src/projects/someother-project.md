@@ -2,6 +2,7 @@
 slug: 'someother-project'
 date: '2019-05-22'
 title: 'Someother Project'
+featuredImage: './tj.jpg'
 ---
 
 # Someother Project

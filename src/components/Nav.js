@@ -6,11 +6,14 @@ import { navigate } from '@reach/router';
 const Nav = ({ location }) => {
   const resolveClick = e => {
     e.preventDefault();
-    location === '/'
-      ? document.querySelector(e.target.hash).scrollIntoView({
-          behavior: 'smooth',
-        })
-      : navigate(e.target.href);
+
+    if (location === '/') {
+      document.querySelector(e.target.hash).scrollIntoView({
+        behavior: 'smooth',
+      });
+    } else {
+      navigate(e.target.href);
+    }
   };
 
   return (

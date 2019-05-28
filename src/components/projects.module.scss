@@ -1,0 +1,10 @@
+@import '../styles/variables';
+
+.projects {
+  margin: 0 auto;
+  width: 80%;
+
+  @include tablet {
+    width: 100%;
+  }
+}
