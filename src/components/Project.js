@@ -6,17 +6,26 @@ import projectStyle from './project.module.scss';
 const Project = ({ title, featuredImage, slug }) => {
   return (
     <div>
-      <h3>{title}</h3>
-      {featuredImage && (
-        <Img
-          fluid={featuredImage}
-          objectFit="cover"
-          objectPosition="50% 50%"
-          alt={title}
-        />
-      )}
-      <div className={projectStyle.imageContainer} />
-      <Link to={`projects/${slug}`}>{title}</Link>
+      <div className={projectStyle.project}>
+        <Link to={`projects/${slug}`}>
+          <div className={projectStyle.imageContainer}>
+            <div className={projectStyle.titleContainer}>
+              <div className={projectStyle.titleContainer__title}>
+                <h3>{title}</h3>
+              </div>
+            </div>
+            {featuredImage && (
+              <Img
+                fluid={featuredImage}
+                objectFit="cover"
+                objectPosition="50% 50%"
+                className={projectStyle.gatsbyImageContainer}
+                alt={title}
+              />
+            )}
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };

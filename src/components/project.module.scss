@@ -1,5 +1,59 @@
 @import '../styles/variables';
 
+.project {
+  margin-bottom: 6.5rem;
+  width: 100%;
+  height: 60rem;
+  background: $dark;
+  border: 0.5rem solid $dark;
+  border-radius: 2rem;
+  box-shadow: 0.3rem 0.4rem 0.5rem rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+
+  &:hover .titleContainer__title {
+    top: calc(50% - 5rem);
+  }
+}
+
 .imageContainer {
-  width: 50%;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.titleContainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+
+  &__title {
+    position: absolute;
+    top: 100%;
+    padding: 3.5rem;
+    width: 100%;
+    background: $blue;
+    box-shadow: 0.3rem 1rem 0.5rem rgba(0, 0, 0, 0.6);
+    text-align: center;
+    transition: 0.5s all ease-in-out;
+
+    h3 {
+      padding: 0;
+      margin: 0;
+      font-size: 3rem;
+      color: #fff;
+      line-height: 3rem;
+      letter-spacing: 0.2rem;
+    }
+  }
+}
+
+.gatsbyImageContainer {
+  height: 100%;
 }
