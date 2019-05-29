@@ -5,10 +5,6 @@ title: 'Test Project'
 featuredImage: './buddy.jpg'
 ---
 
-# Test Project
-
-## Sub Heading
-
 Conveniently customize long-term high-impact expertise rather than 24/365 quality vectors. Dramatically incentivize distinctive materials via market positioning mindshare. Globally repurpose fully tested potentialities vis-a-vis e-business paradigms. Holisticly extend error-free schemas after premier content. Compellingly fabricate prospective leadership after web-enabled internal or "organic" sources.
 
 ![Buddy](./buddy.jpg)
