@@ -5,7 +5,7 @@ import footerStyle from './footer.module.scss';
 const Footer = () => {
   return (
     <footer className={footerStyle.footer}>
-      <p>&copy; {moment().format('YYYY')} TJ LaBaugh</p>
+      <p>{moment().format('YYYY')} TJ LaBaugh</p>
     </footer>
   );
 };

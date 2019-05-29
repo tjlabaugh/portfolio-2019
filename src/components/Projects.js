@@ -30,7 +30,6 @@ const Projects = () => (
     query={PROJECT_QUERY}
     render={({ allMarkdownRemark }) => (
       <div className={projectsStyles.projects}>
-        <h3>Projects</h3>
         {allMarkdownRemark.edges.map(edge => (
           <Project
             key={edge.node.frontmatter.slug}

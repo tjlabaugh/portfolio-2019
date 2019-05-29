@@ -65,4 +65,8 @@
 
 .gatsbyImageContainer {
   height: 100%;
+
+  picture img {
+    object-position: top !important;
+  }
 }

@@ -17,8 +17,6 @@ const Project = ({ title, featuredImage, slug }) => {
             {featuredImage && (
               <Img
                 fluid={featuredImage}
-                objectFit="cover"
-                objectPosition="50% 50%"
                 className={projectStyle.gatsbyImageContainer}
                 alt={title}
               />

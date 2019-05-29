@@ -2,7 +2,6 @@ import React from 'react';
 import Projects from './Projects';
 import portfolioStyle from './portfolio.module.scss';
 import backgroundImage from '../images/body-bg.png';
-// import { projects } from '../data/projects';
 
 const Portfolio = props => {
   return (
@@ -15,9 +14,15 @@ const Portfolio = props => {
     >
       <div className={portfolioStyle.container}>
         <h2>Portfolio</h2>
-        <p>Hello.</p>
-        <p>I'm TJ, a web developer.</p>
-        <p>Check out some of my work:</p>
+        <p>Hello!</p>
+        <p>
+          My name is TJ. I am a web developer passitionate about front-end
+          development, working with JavaScript and the React library.
+        </p>
+        <p>
+          Check out some of my work below and feel free to reach out to me in
+          the contact section below!
+        </p>
         <Projects />
       </div>
     </div>
