@@ -25,6 +25,7 @@ h2 {
   letter-spacing: 0.2rem;
   text-align: center;
   text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
 }
 
 p {
@@ -38,4 +39,18 @@ p {
 
 a {
   text-decoration: none;
+}
+
+.js {
+  color: #f0db4f;
+  font-weight: 700;
+  background: $dark;
+  padding: 0 0.5rem;
+}
+
+.react {
+  color: #61dbfb;
+  font-weight: 700;
+  background: $dark;
+  padding: 0 0.5rem;
 }
