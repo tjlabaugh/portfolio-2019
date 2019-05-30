@@ -26,6 +26,12 @@ const Nav = ({ location }) => {
           </Link>
         </li>
         <li>
+          <Link to="#about" onClick={resolveClick}>
+            About Me
+            <div />
+          </Link>
+        </li>
+        <li>
           <Link to="#portfolio" onClick={resolveClick}>
             Portfolio
             <div />

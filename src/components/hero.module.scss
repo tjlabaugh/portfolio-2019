@@ -52,7 +52,9 @@
 }
 
 .social {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 2rem;
   padding: 1rem 1.6rem;
   height: 6.5rem;
@@ -64,7 +66,7 @@
 
   img {
     display: block;
-    height: 100%;
+    height: 3.5rem;
     margin: 0 auto;
   }
 
