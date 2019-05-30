@@ -32,7 +32,7 @@ const Nav = ({ location }) => {
           </Link>
         </li>
         <li>
-          <Link to="/#contact" onClick={resolveClick}>
+          <Link to="#contact" onClick={resolveClick}>
             Contact
             <div />
           </Link>

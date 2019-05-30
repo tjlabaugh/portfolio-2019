@@ -15,9 +15,8 @@ const Portfolio = props => {
       <div className={portfolioStyle.container}>
         <h2>Portfolio</h2>
         <p>Hello!</p>
-
         <p>
-          My name is TJ. I am a web developer passitionate about front-end
+          Hello! My name is TJ. I am a web developer passionate about front-end
           development, working with <span className="js">JavaScript</span> and
           the <span className="react">React</span> library.
         </p>

@@ -50,3 +50,25 @@
     text-shadow: 4px 6px 2px rgba(0, 0, 0, 0.6);
   }
 }
+
+.social {
+  display: block;
+  margin-bottom: 2rem;
+  padding: 1rem 1.6rem;
+  height: 6.5rem;
+  background: $dark;
+  border: 0.2rem solid #fff;
+  border-radius: 2rem;
+  box-shadow: 0.2rem 0.4rem 0.3rem rgba(0, 0, 0, 0.5);
+  transition: 0.2s background ease-in-out;
+
+  img {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  &:hover {
+    background: darken($dark, 5%);
+  }
+}

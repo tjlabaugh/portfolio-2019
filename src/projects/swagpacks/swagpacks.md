@@ -8,6 +8,7 @@ featuredImage: './swagpack-preview.jpg'
 <style>
   .used {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin: 2rem 0;
     }
@@ -18,6 +19,7 @@ featuredImage: './swagpack-preview.jpg'
 </style>
 
 <div class="used">
+  <h4>Built With:</h4>
   <img src="../../images/html5.png" alt="HTML5">
   <img src="../../images/js.png" alt="JavaScript">
   <img src="../../images/sass.png" alt="Sass">

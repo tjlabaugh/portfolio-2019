@@ -2,12 +2,14 @@ import React from 'react';
 import heroStyle from './hero.module.scss';
 import { StaticQuery, graphql } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
+import linkedin from '../images/linkedin.png';
+import github from '../images/github.png';
 
 const Hero = () => (
   <StaticQuery
     query={graphql`
-      query BackgroundSection {
-        desktop: file(relativePath: { regex: "/hero/" }) {
+      query images {
+        herobg: file(relativePath: { regex: "/hero/" }) {
           childImageSharp {
             fluid(maxWidth: 1600) {
               ...GatsbyImageSharpFluid
@@ -19,7 +21,7 @@ const Hero = () => (
     render={data => (
       <BackgroundImage
         className={heroStyle.hero}
-        fluid={data.desktop.childImageSharp.fluid}
+        fluid={data.herobg.childImageSharp.fluid}
         Tag="section"
         style={{
           backgroundPosition: '50% 50%',
@@ -36,7 +38,22 @@ const Hero = () => (
             </h3>
           </div>
           <div>
-            <p>Check me out on LinkedIn</p>
+            <a
+              className={heroStyle.social}
+              href="https://www.linkedin.com/in/thomas-labaugh-5b70752b/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={linkedin} alt="Linkedin" />
+            </a>
+            <a
+              className={heroStyle.social}
+              href="https://github.com/tjlabaugh"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={github} alt="Github" />
+            </a>
           </div>
         </div>
       </BackgroundImage>
