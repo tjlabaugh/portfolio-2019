@@ -78,4 +78,9 @@
       resize: none;
     }
   }
+
+  &__honey {
+    visibility: hidden;
+    height: 0;
+  }
 }

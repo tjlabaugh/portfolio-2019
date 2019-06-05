@@ -5,7 +5,14 @@ const Contact = () => {
   return (
     <div className={contactStyle.contact} id="contact">
       <h2>Contact Me</h2>
-      <form className={contactStyle.form} action="">
+      <form
+        className={contactStyle.form}
+        name="contact"
+        method="POST"
+        netlify-honeypot="do-not-fill-out"
+        data-netlify="true"
+        action=""
+      >
         <div className={contactStyle.form__fields}>
           <label htmlFor="">Name</label>
           <input type="text" name="name" id="name" placeholder="Your Name" />
@@ -28,6 +35,12 @@ const Contact = () => {
             rows="10"
             placeholder="Say hi!"
           />
+        </div>
+        <div className={contactStyle.form__honey}>
+          <label>
+            Don’t fill this out if you're human:{' '}
+            <input name="do-not-fill-out" />
+          </label>
         </div>
         <input type="submit" value="Send" />
       </form>
