@@ -11,7 +11,6 @@ const Contact = () => {
         method="POST"
         netlify-honeypot="do-not-fill-out"
         data-netlify="true"
-        action="/"
       >
         <div className={contactStyle.form__fields}>
           <label htmlFor="">Name</label>
