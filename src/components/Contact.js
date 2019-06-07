@@ -2,7 +2,7 @@ import React from 'react';
 import contactStyle from './contact.module.scss';
 
 const Contact = () => {
-  handleSubmission = e => {
+  const handleSubmission = e => {
     e.preventDefault();
 
     console.log(`form submitted`);
