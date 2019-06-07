@@ -12,6 +12,7 @@ const Contact = () => {
         netlify-honeypot="do-not-fill-out"
         data-netlify="true"
       >
+        <input type="hidden" name="form-name" value="contact" />
         <div className={contactStyle.form__fields}>
           <label htmlFor="">Name</label>
           <input type="text" name="name" id="name" placeholder="Your Name" />
