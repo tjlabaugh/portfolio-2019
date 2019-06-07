@@ -12,14 +12,12 @@ const Contact = () => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode(
-        { 'form-name': 'contact' },
-        {
-          name: 'Thomas J',
-          email: 'test@test.com',
-          message: 'Hello, this is a test',
-        }
-      ),
+      body: encode({
+        'form-name': 'contact',
+        name: 'Thomas J',
+        email: 'test@test.com',
+        message: 'Hello, this is a test',
+      }),
     })
       .then(() => alert('Success!'))
       .catch(error => alert(error));
