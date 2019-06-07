@@ -2,6 +2,12 @@ import React from 'react';
 import contactStyle from './contact.module.scss';
 
 const Contact = () => {
+  handleSubmission = e => {
+    e.preventDefault();
+
+    console.log(`form submitted`);
+  };
+
   return (
     <div className={contactStyle.contact} id="contact">
       <h2>Contact Me</h2>
@@ -11,6 +17,7 @@ const Contact = () => {
         method="POST"
         netlify-honeypot="do-not-fill-out"
         data-netlify="true"
+        onSubmit={handleSubmission}
       >
         <input type="hidden" name="form-name" value="contact" />
         <div className={contactStyle.form__fields}>
