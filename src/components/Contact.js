@@ -1,14 +1,16 @@
 import React from 'react';
 import contactStyle from './contact.module.scss';
 
-const encode = data => {
-  return Object.keys(data)
-    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&');
-};
-
 const Contact = () => {
+  const encode = data => {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+      .join('&');
+  };
+
   const handleSubmission = e => {
+    e.preventDefault();
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -19,10 +21,9 @@ const Contact = () => {
         message: 'Hello, this is a test',
       }),
     })
-      .then(() => alert('Success!'))
-      .catch(error => alert(error));
-
-    e.preventDefault();
+      .then(res => res.json())
+      .then(res => console.log(res))
+      .catch(error => console.log(JSON.stringify(error)));
   };
 
   return (
