@@ -10,12 +10,15 @@ const encode = data => {
 
 const Contact = () => {
   const handleSubmission = e => {
+    const formValues = { name: e.target.elements.name.value, email: e.target.elements.email.value, message: e.target.elements.message.value };
+
+    console.log({ 'form-name': 'contact', ...formValues });
 
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': 'contact', name: 'Thomas', email: 'thomas@test.com', message: 'Hello'
+        'form-name': 'contact', ...formValues
       }),
     })
       .then(() => console.log('success'))
