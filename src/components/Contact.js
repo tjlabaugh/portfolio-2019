@@ -15,10 +15,7 @@ const Contact = () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
-        'form-name': 'contact',
-        name: 'Thomas J',
-        email: 'test@test.com',
-        message: 'Hello, this is a test',
+        'form-name': 'contact'
       }),
     })
       .then(() => console.log('success'))
