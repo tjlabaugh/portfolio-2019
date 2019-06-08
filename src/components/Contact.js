@@ -1,20 +1,21 @@
 import React from 'react';
 import contactStyle from './contact.module.scss';
 
+const encode = data => {
+  // return Object.keys(data)
+  //   .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+  //   .join('&');
+
+  const encoded = Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+
+  console.log(encoded);
+  return encoded;
+};
+
+
 const Contact = () => {
-  const encode = data => {
-    // return Object.keys(data)
-    //   .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    //   .join('&');
-
-    const encoded = Object.keys(data)
-      .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-      .join('&');
-
-    console.log(encoded);
-    return encoded;
-  };
-
   const handleSubmission = e => {
     e.preventDefault();
 
