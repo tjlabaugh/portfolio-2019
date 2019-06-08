@@ -17,7 +17,6 @@ const encode = data => {
 
 const Contact = () => {
   const handleSubmission = e => {
-    e.preventDefault();
 
     fetch('/', {
       method: 'POST',
@@ -29,9 +28,11 @@ const Contact = () => {
         message: 'Hello, this is a test',
       }),
     })
-      .then(res => console.log('success'))
-      // .then(text => console.log(text))
+      .then(res => res.blob())
+      .then(blob => console.log(blob))
       .catch(error => console.log(error));
+
+    e.preventDefault();
   };
 
   return (
