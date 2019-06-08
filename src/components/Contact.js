@@ -2,16 +2,9 @@ import React from 'react';
 import contactStyle from './contact.module.scss';
 
 const encode = data => {
-  // return Object.keys(data)
-  //   .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-  //   .join('&');
-
-  const encoded = Object.keys(data)
+  return Object.keys(data)
     .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
     .join('&');
-
-  console.log(encoded);
-  return encoded;
 };
 
 
@@ -28,9 +21,8 @@ const Contact = () => {
         message: 'Hello, this is a test',
       }),
     })
-      .then(res => res.blob())
-      .then(blob => console.log(blob))
-      .catch(error => console.log(error));
+      .then(() => console.log('success'))
+      .catch(error => console.log(error))
 
     e.preventDefault();
   };
