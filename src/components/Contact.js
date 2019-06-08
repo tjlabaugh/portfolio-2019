@@ -3,9 +3,16 @@ import contactStyle from './contact.module.scss';
 
 const Contact = () => {
   const encode = data => {
-    return Object.keys(data)
+    // return Object.keys(data)
+    //   .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    //   .join('&');
+
+    const encoded = Object.keys(data)
       .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
       .join('&');
+
+    console.log(encoded);
+    return encoded;
   };
 
   const handleSubmission = e => {
@@ -21,9 +28,9 @@ const Contact = () => {
         message: 'Hello, this is a test',
       }),
     })
-      .then(res => res.json())
-      .then(res => console.log(res))
-      .catch(error => console.log(JSON.stringify(error)));
+      .then(res => console.log('success'))
+      // .then(text => console.log(text))
+      .catch(error => console.log(error));
   };
 
   return (
