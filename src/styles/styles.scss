@@ -11,6 +11,10 @@ html {
   background: $dark;
 }
 
+#___gatsby {
+  overflow-x: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -67,4 +71,96 @@ a {
   font-weight: 700;
   background: $dark;
   padding: 0 0.5rem;
+}
+
+.mobile-button {
+  display: none;
+  width: 4.5rem;
+  height: 4.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+
+  @include tablet {
+    position: absolute;
+    right: 5%;
+    display: block;
+  }
+
+  div {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+
+    span {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 0.4rem;
+      background: #fff;
+      transition: 0.4s all ease-in-out;
+      transform-origin: left;
+
+      &:nth-of-type(1) {
+        left: 0;
+        top: 25%;
+      }
+
+      &:nth-of-type(2) {
+        left: 0;
+        top: 50%;
+      }
+
+      &:nth-of-type(3) {
+        left: 0;
+        top: 75%;
+      }
+    }
+  }
+}
+
+.open {
+  span {
+    &:nth-of-type(1) {
+      top: 27%;
+      transform: rotate(40deg);
+    }
+
+    &:nth-of-type(2) {
+      width: 0%;
+    }
+
+    &:nth-of-type(3) {
+      top: 73%;
+      transform: rotate(-40deg);
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include tablet {
+    position: absolute;
+    top: 5rem;
+    left: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: $dark;
+    width: 100%;
+    height: 100vh;
+    transition: 0.4s all ease-in-out;
+    z-index: 10;
+  }
+}
+
+.open .menu {
+  left: 0%;
 }

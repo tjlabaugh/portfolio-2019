@@ -6,6 +6,7 @@ import { navigate } from '@reach/router';
 const Nav = ({ location }) => {
   const resolveClick = e => {
     e.preventDefault();
+    const nav = document.querySelector('nav');
 
     if (location === '/') {
       document.querySelector(e.target.hash).scrollIntoView({
@@ -14,11 +15,24 @@ const Nav = ({ location }) => {
     } else {
       navigate(e.target.href);
     }
+
+    nav.classList.remove('open');
+  };
+
+  const resolveButtonClick = e => {
+    e.currentTarget.parentElement.classList.toggle('open');
   };
 
   return (
     <nav className={navStyle.nav}>
-      <ul>
+      <button className="mobile-button" onClick={resolveButtonClick}>
+        <div>
+          <span />
+          <span />
+          <span />
+        </div>
+      </button>
+      <ul className="menu">
         {location !== '/' ? (
           <li>
             <Link to="/">
