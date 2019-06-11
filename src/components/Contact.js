@@ -7,22 +7,43 @@ const encode = data => {
     .join('&');
 };
 
-
 const Contact = () => {
   const handleSubmission = e => {
-    const formValues = { name: e.target.elements.name.value, email: e.target.elements.email.value, message: e.target.elements.message.value };
+    const form = e.target;
+    const field = e.target.elements;
+    const formValues = {
+      name: field.name.value,
+      email: field.email.value,
+      message: field.message.value,
+    };
+    let valid = true;
 
     console.log({ 'form-name': 'contact', ...formValues });
 
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': 'contact', ...formValues
-      }),
-    })
-      .then(() => console.log('success'))
-      .catch(error => console.log(error))
+    if (
+      formValues.name === '' ||
+      formValues.email === '' ||
+      formValues.message === ''
+    ) {
+      valid = false;
+    }
+
+    console.log(form);
+
+    if (valid) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({
+          'form-name': 'contact',
+          ...formValues,
+        }),
+      })
+        .then(() => console.log('success'))
+        .catch(error => console.log(error));
+
+      form.dangerouslySetInnerHTML = `<h1>Form submitted</h1>`;
+    }
 
     e.preventDefault();
   };
@@ -31,7 +52,7 @@ const Contact = () => {
     <div className={contactStyle.contact} id="contact">
       <h2>Contact Me</h2>
       <form
-        className={contactStyle.form}
+        className={`${contactStyle.form} contact-form`}
         name="contact"
         method="POST"
         netlify-honeypot="do-not-fill-out"
@@ -40,26 +61,34 @@ const Contact = () => {
       >
         <input type="hidden" name="form-name" value="contact" />
         <div className={contactStyle.form__fields}>
-          <label htmlFor="">Name</label>
-          <input type="text" name="name" id="name" placeholder="Your Name" />
+          <label htmlFor="">Name*</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Your Name"
+            required
+          />
         </div>
         <div className={contactStyle.form__fields}>
-          <label htmlFor="">Email</label>
+          <label htmlFor="">Email*</label>
           <input
             type="email"
             name="email"
             id="email"
             placeholder="your@email.com"
+            required
           />
         </div>
         <div className={contactStyle.form__textareaFields}>
-          <label htmlFor="">Message</label>
+          <label htmlFor="">Message*</label>
           <textarea
             name="message"
             id="message"
             cols="30"
             rows="10"
             placeholder="Say hi!"
+            required
           />
         </div>
         <div className={contactStyle.form__honey}>

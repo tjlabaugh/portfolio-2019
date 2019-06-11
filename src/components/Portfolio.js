@@ -49,7 +49,7 @@ const Portfolio = () => {
             <p>
               Check out some of my work below and feel free to reach out to me
               in the{' '}
-              <Link to="#contact" onClick={resolveClick}>
+              <Link to="/#contact" onClick={resolveClick}>
                 contact
               </Link>{' '}
               section below.

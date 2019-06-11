@@ -7,7 +7,7 @@ const Project = ({ title, featuredImage, slug }) => {
   return (
     <div>
       <div className={projectStyle.project}>
-        <Link to={`projects/${slug}`}>
+        <Link to={`/projects/${slug}`}>
           <div className={projectStyle.imageContainer}>
             <div className={projectStyle.titleContainer}>
               <div className={projectStyle.titleContainer__title}>
