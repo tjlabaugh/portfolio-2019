@@ -19,12 +19,14 @@ const Nav = ({ location }) => {
   return (
     <nav className={navStyle.nav}>
       <ul>
-        <li>
-          <Link to="/">
-            Home
-            <div />
-          </Link>
-        </li>
+        {location !== '/' ? (
+          <li>
+            <Link to="/">
+              Home
+              <div />
+            </Link>
+          </li>
+        ) : null}
         <li>
           <Link to="/#about" onClick={resolveClick}>
             About Me
