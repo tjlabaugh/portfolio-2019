@@ -32,9 +32,9 @@ const Hero = () => (
           <div>
             <h1>TJ LaBaugh</h1>
             <h3>
-              <span>{`< `}</span>
+              <span>{`{ `}</span>
               {`web developer`}
-              <span>{` >`}</span>
+              <span>{` }`}</span>
             </h3>
           </div>
           <div>

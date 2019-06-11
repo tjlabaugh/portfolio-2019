@@ -9,7 +9,8 @@ const encode = data => {
 
 const Contact = () => {
   const handleSubmission = e => {
-    const form = e.target;
+    const form = document.querySelector('.contact-form');
+    const message = document.querySelector('.form-message');
     const field = e.target.elements;
     const formValues = {
       name: field.name.value,
@@ -18,8 +19,6 @@ const Contact = () => {
     };
     let valid = true;
 
-    console.log({ 'form-name': 'contact', ...formValues });
-
     if (
       formValues.name === '' ||
       formValues.email === '' ||
@@ -27,8 +26,6 @@ const Contact = () => {
     ) {
       valid = false;
     }
-
-    console.log(form);
 
     if (valid) {
       fetch('/', {
@@ -41,9 +38,10 @@ const Contact = () => {
       })
         .then(() => console.log('success'))
         .catch(error => console.log(error));
-
-      form.dangerouslySetInnerHTML = `<h1>Form submitted</h1>`;
     }
+
+    form.style.visibility = 'hidden';
+    message.innerHTML = `<p>Submission Successful.<br /><br />Thank you for contacting me!</p>`;
 
     e.preventDefault();
   };
@@ -99,6 +97,7 @@ const Contact = () => {
         </div>
         <input type="submit" value="Send" />
       </form>
+      <div className={`${contactStyle.message} form-message`} />
     </div>
   );
 };
