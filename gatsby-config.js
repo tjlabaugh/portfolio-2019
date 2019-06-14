@@ -11,6 +11,14 @@ module.exports = {
     title: 'TJ LaBaugh',
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Montserrat', 'Lalezar', 'Work Sans'],
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
