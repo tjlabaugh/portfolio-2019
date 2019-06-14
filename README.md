@@ -1,6 +1,6 @@
-#My Portfolio Site
+# My Portfolio Site
 
-##Build With:
+## Build With:
 
 - JavaScript
 - React
