@@ -7,7 +7,11 @@
 const path = require(`path`);
 
 module.exports = {
+  siteMetadata: {
+    title: 'TJ LaBaugh',
+  },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,

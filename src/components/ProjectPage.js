@@ -1,5 +1,6 @@
 import React from 'react';
 import Layout from './Layout';
+import Head from './Head';
 import { graphql } from 'gatsby';
 import backgroundImage from '../images/body-bg.png';
 import projectPageStyle from './projectPage.module.scss';
@@ -10,6 +11,7 @@ class ProjectPage extends React.Component {
 
     return (
       <Layout location={markdownRemark.frontmatter.slug}>
+        <Head title={markdownRemark.frontmatter.title} />
         <div
           className={projectPageStyle.container}
           style={{
