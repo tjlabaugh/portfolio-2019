@@ -2,16 +2,7 @@ import React from 'react';
 import Nav from './Nav';
 import Footer from './Footer';
 
-if (
-  navigator.userAgent.indexOf('MSIE') !== -1 ||
-  navigator.appVersion.indexOf('Trident/') > -1
-) {
-  window.location.href = '/ie';
-}
-
-const Layout = props => {
-  // Detects IE <= 11 and sends to error page
-
+const Layout = props => {]
   return (
     <div>
       <Nav location={props.location} />
