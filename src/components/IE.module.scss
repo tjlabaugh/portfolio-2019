@@ -1,0 +1,24 @@
+@import '../styles/variables';
+
+.ie {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+  min-height: 100vh;
+  background: $blue;
+  text-align: center;
+
+  p {
+    margin-bottom: 2rem;
+  }
+}
+
+.logos {
+  text-align: center;
+
+  img {
+    margin: 2rem;
+  }
+}
