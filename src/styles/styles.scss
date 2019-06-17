@@ -122,9 +122,9 @@ a {
 }
 
 .open {
-  span {
+  div span {
     &:nth-of-type(1) {
-      top: 27%;
+      top: 26%;
       transform: rotate(40deg);
     }
 
