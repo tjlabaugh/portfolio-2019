@@ -26,4 +26,4 @@ featuredImage: './portfolio-preview.jpg'
   <img src="../../images/gatsby.png" alt="Gatsby">
 </div>
 
-![Swagpacks](./swagpack.jpg)
+![Swagpacks](./tjlabaugh-screenshot.jpg)
