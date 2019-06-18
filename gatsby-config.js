@@ -19,7 +19,15 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: `UA-142318999-1`,
+        head: true,
+      },
+    },
     `gatsby-plugin-react-helmet`,
+
     `gatsby-plugin-sass`,
     {
       resolve: `gatsby-source-filesystem`,
