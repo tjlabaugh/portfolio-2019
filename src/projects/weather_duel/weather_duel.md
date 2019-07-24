@@ -24,7 +24,7 @@ featuredImage: './weather_duel_preview.jpg'
   <img src="../../images/sass.png" alt="Sass">
   <img src="../../images/react.png" alt="React">
 
-<a href="https://weather-duel.herokuapp.com/" target="_blank">Project Link</a>
+<a style="text-align: center;" href="https://weather-duel.herokuapp.com/" target="_blank">Project Link</a>
 
 </div>
 
